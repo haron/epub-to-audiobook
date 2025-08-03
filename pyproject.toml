@@ -1,0 +1,24 @@
+[project]
+name = "epub-to-audiobook"
+version = "0.1.0"
+description = "Convert epub to audiobook using Modal"
+authors = [
+  { name="Alexander Ryabov", email="alex.ryabov@gmail.com" },
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "modal",
+    "natsort",
+]
+[dependency-groups]
+remote = [
+    "audiblez",
+    "pip",
+]
+
+[tool.ruff.lint]
+ignore = ["F401", "E402"]
+
+[tool.ruff]
+line-length = 140
+
