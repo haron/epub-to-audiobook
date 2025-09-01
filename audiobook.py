@@ -54,7 +54,7 @@ def download():
     # downloading via command line tool due to 16Mb limit: https://modal.com/docs/guide/volumes#downloading-a-file-from-a-volume
     cmd(f"uvx modal volume get {volume.name} /audiobook.m4b audiobook.m4b")
     print("Revoming volume")
-    volume.delete()
+    volume.delete(volume.name)
 
 
 @app.local_entrypoint()
